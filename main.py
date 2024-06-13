@@ -12,8 +12,21 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Particle Automaton")
 
 # Set up the game matrix
-class GameMatrix(np.array):
-    pass
+class GameMatrix:
+    
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.matrix = np.zeros((self.height, self.width), dtype=int)
+    
+    def slice_square_around(self, x, y, radius):
+        left_limit = x - radius
+        right_limit = x + radius
+        up_limit = y + radius
+        down_limit = y - radius
+        return self.matrix[down_limit:up_limit, left_limit:right_limit]
+
+    
 
 
 matrix_width, matrix_height = 40, 30
