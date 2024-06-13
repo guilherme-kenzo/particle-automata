@@ -12,6 +12,10 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Particle Automaton")
 
 # Set up the game matrix
+class GameMatrix(np.array):
+    pass
+
+
 matrix_width, matrix_height = 40, 30
 matrix = np.zeros((matrix_height, matrix_width), dtype=int)
 
@@ -47,6 +51,10 @@ class Particle:
         self.y = self.y + movement
 
     def check_collision(self, particles):
+        idx = self.rect.collidelist(
+            particles
+        )
+
 
 
 class A(Particle):
