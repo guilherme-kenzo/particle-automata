@@ -1,4 +1,4 @@
-# Particle Automata README
+# Particle Automata
 
 ## Overview
 
@@ -14,8 +14,8 @@ This project is a simulation of particle interactions using Pygame. Particles of
 1. **Clone the repository:**
 
     ```sh
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/guilherme-kenzo/particle-automata.git
+    cd particle-automata
     ```
 
 2. **Install dependencies using Poetry:**
